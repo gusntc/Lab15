@@ -9,13 +9,23 @@ void findLocalMax(const double [][N], bool [][N]);
 
 void showMatrix(const bool [][N]);
 
+
 int main(){
 	double A[N][N]; 
 	bool B[N][N]; 
 	cout << "Input the matrix.....\n";
 	inputMatrix(A);
-	findLocalMax(A,B);
+	/*findLocalMax(A,B);
 	cout << "Result is \n";
-	showMatrix(B);
+	showMatrix(B);*/
 	return 0;
+}
+
+void inputMatrix(double x[][N]){
+	for(int i=1;i<N+1;i++){
+		cout << "Row " << i << ": ";
+		for(int j=1;j<N;j++){
+			cin >> x[i-1][j-1];
+		}
+	}
 }
